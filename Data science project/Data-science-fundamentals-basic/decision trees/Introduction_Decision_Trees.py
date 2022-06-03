@@ -1,4 +1,8 @@
 ## 3. Converting Categorical Variables ##
+import pandas
+
+# Set Index_col to false to avoid pandas thinking that the first column is row indexes(it's age)
+income = pandas.read_csv('income.csv', index_col = False)
 
 # Convert a single column from text categories to numbers
 col = pandas.Categorical(income["workclass"])
